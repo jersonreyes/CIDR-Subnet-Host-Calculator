@@ -1,0 +1,378 @@
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+   }
+   ::-webkit-scrollbar-thumb {
+	background: #9b9b9b;
+	border-radius: 10px;
+   }
+   ::-webkit-scrollbar-thumb:hover{
+	background: #828282;
+   }
+   ::-webkit-scrollbar-track{
+	background: transparent;
+	border-radius: 10px;
+   }
+
+body {
+	background-color:#0f0f0f;
+	color:gray;
+	font-family:arial;
+	padding:0;
+	overflow-x: hidden;
+	min-height: 88vh; 
+	margin:0;
+	background-image: url("bg.jpg");
+	background-size:100% auto;
+}
+
+#ip-container {
+	
+	height:100%;
+}
+
+#bg {
+	width:100vw;
+	height:100vh;
+	position:fixed;
+	top:0px;
+	background-color:rgba(19, 19, 19, 0.97);
+	filter:blur(00px);
+	left:0px;
+	z-index:-1;
+	
+}
+
+#output {
+	overflow-y: scroll;
+	height:45vh;
+	display:none;
+	width:200%;
+}
+
+
+#logo {
+	width:20vw;
+	height:5vw;
+	background-image: url("logo.png");	
+	background-size:Cover;
+	margin-top:6vw;
+	margin-bottom:3%;
+}
+
+input[type="radio"] {
+	visibility: hidden;
+	display:none;
+}
+
+#subnet-btn, #host-btn {
+	background-color:rgb(93, 93, 93);
+	font-size:0.7vw;
+	padding:1vw;
+	color:rgb(179, 179, 179);
+	border:1px solid gray;
+	backdrop-filter: blur(150px);
+	display:inline-block;
+	transition: 100ms ease-in;
+}
+
+:checked+label {
+	background-color:rgba(0,0,0,0.1) !important;
+	color:gray !important;
+	padding-left:5% !important;
+	padding-right:5% !important;
+}
+
+#additional, #output {
+	position:relative;
+}
+
+
+#ip_ctr {
+	text-align:Center;
+	width:80%;
+	transition:500ms ease-in;
+}
+
+#ip_ctr.activated {
+	opacity: 1 !important;
+	width:40%;
+	float:left;
+	margin-right:-200px;
+	text-align:left;
+}
+
+#ip_ctr.activated center {
+	text-align:left;
+}
+
+#ip_ctr.activated #ip {
+	font-size:3vw;
+	width:40%;
+	text-align:left;
+}
+
+#ip_ctr.activated #subnet, #ip_ctr.activated #host {
+	width:10%;
+}
+
+#ip_ctr.activated #calculate {
+	margin-top:7%;
+}
+
+
+#output_container {
+	float:left;
+	margin-left:10%;
+	transition:700ms ease-in;
+	opacity:0;
+	margin-top:7%;
+}
+
+input[type="text"] {
+	padding:20px;
+}
+
+#host-text {
+	margin-left:20px;
+}
+
+#ip {
+	width:20%;
+	width:30vw;
+	padding:1.5vw 4vw;
+	padding-left:0;
+	margin-bottom:1%;
+	text-align:right;
+	color:gray;;
+	font-size:50px;
+	font-size:5vw;
+	background-color:transparent;
+	border:none;
+	border-bottom: 1px solid rgba(0,0,0,0);
+	outline:none;
+}
+	
+
+#cidr {
+	width:5%;
+	width:5vw;
+	padding:1.5vw 4vw;
+	font-size:50px;
+	font-size:2.5vw;
+	background-color:transparent;
+	color:gray;;
+	border:none;
+	border-bottom: 1px solid rgba(0,0,0,0);
+	outline:none;
+}
+
+input[type="number"] {
+	font-size:0.7vw;
+	padding:1vw 0.5vw;
+	backdrop-filter: blur(150px);
+	width:60px;
+}
+
+#ip:focus, #cidr:focus {
+	border-bottom: 1px solid gray;
+}
+
+#divider {
+	height:20px;
+	width:1px;
+	background-color:gray;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+#ov {
+	font-size:60px;
+	font-size:3vw;
+	font-weight:light;
+	color:Gray;
+}
+
+#host {
+	transition:500ms ease;
+}
+
+#calculate {
+	padding:1.5% 3%;
+	color:rgb(194, 194, 194);
+	background-color:rgb(90, 90, 90);
+	border:none;
+	font-size:0.9vw;
+	margin-top:4%;
+	transition:100ms ease-in;
+	border: 1px solid transparent;
+}
+
+#calculate:Hover {
+	
+	color:Gray;
+	background-color: transparent;
+	border:1px solid gray;
+	box-shadow:0px 0px 50px rgb(24, 24, 24);
+}
+
+input[type="submit"]:hover {
+	border-radius:25px;
+}
+
+p {
+	font-size:0.8vw;
+}
+
+h2 {
+	font-size:1.3vw;
+}
+
+h3 {
+	font-size:1.1vw;
+}
+
+#ip_ctr {
+	margin-right:-10vw !important;
+}
+
+@media only screen and (max-width: 1088px) {
+	#output-container {
+		display:block;
+		margin-left:10%;
+		position:Relative;
+		float:none !important;
+		clear:both;
+		display:block;
+	}
+
+	h2 {
+		font-size:4vw;
+	}
+	
+	h3 {
+		font-size:3.5vw;
+	}
+
+
+	#ip_ctr {
+		position:Relative;
+		float:none !important;
+		display:block;
+		margin-left:0px !important;
+		width:100%;	
+		clear:both;
+	}
+
+	#ip {
+		font-size:7vw;
+		width:40%;
+		text-align:Center;
+	}
+
+	#cidr {
+		font-size:5vw;
+		width:5%;
+	}
+
+	#ip_ctr.activated {
+		margin-left:10% !important;
+		width: 90% !important;
+	}
+
+	#ip_ctr.activated #ip, #ip_ctr.activated #cidr {
+		font-size:5vw;
+	}
+
+	#ip_ctr.activated #cidr {
+		width:7%;
+	}
+
+	input[type="number"] {
+		padding:20px 10px;
+		width:70px;
+	}
+
+	#subnet-btn, #host-btn {
+		font-size:18px;
+		padding:20px;
+	}
+
+	#solt {
+		font-size:9vw;
+	}
+
+	#host, #subnet {
+		font-size:18px !important;
+		padding-left:3% !important;
+		width:20% !important;
+		padding-right:1% !important;
+	}
+
+	#calculate {
+		font-size:18px;
+		padding:20px;
+		margin-top:10%;
+	}
+
+	#numof, #basedon {
+		margin-top:5%;
+	}
+
+	#logo {
+		width:60%;
+		margin-top:15vh;
+		margin-bottom:10%;
+		height:14vw;
+	}
+
+	#ip_ctr.activated #logo {
+		margin-top:15%;
+	}
+
+	p {
+		font-size:12px;
+	}
+  }
+
+#subnet, #host {
+	min-width:7%;
+	text-align:center;
+	right:0px;
+	background-color: transparent;
+	border: 1px solid gray;
+	display:inline-block;
+	color:Gray;
+}
+
+#solution {
+	margin-top:-40%;
+}
+
+.ip-block {
+	margin-top:5%;
+}
+
+.disabled {
+	background-color:rgba(0,0,0,0.1) !important;
+	border:1px solid rgba(0,0,0,0) !important;
+}
+
+#subnet {
+}
+
+.highlight {
+	color:yellow;
+}
+
+table th:first-child, table td:first-child {
+}
+
+table th:nth-child(2), table td:nth-child(2) {
+}
+
+tr, td {
+	width:50%;
+}
