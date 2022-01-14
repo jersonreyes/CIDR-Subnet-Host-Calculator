@@ -1,2 +1,2 @@
-# CIDR-Subnet-Host-Calculator
+# CIDR/Subnet/Host Calculator
 Old project - Uploading for archiving purposes
